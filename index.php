@@ -14,7 +14,7 @@ if (isset($_SESSION['user'])) {
     echo '<br><a href="auth.php?logout=true">Выйти</a>';
 } elseif (isset($_COOKIE['bg_color']) && isset($_COOKIE['font_color'])) {
     // Автоматическая авторизация (если cookies присутствуют)
-    $_SESSION['user'] = 'Гость'; // Или можно загрузить имя пользователя, если оно сохраняется в cookies
+    $_SESSION['user'] = 'Гость'; 
     $bg_color = $_COOKIE['bg_color'];
     $font_color = $_COOKIE['font_color'];
 
@@ -27,7 +27,7 @@ if (isset($_SESSION['user'])) {
     exit;
 }
 
-// Подключение к базе данных (для примера, оставляем ваш код)
+// Подключение к базе данных
 try {
     $dsn = 'mysql:host=localhost;dbname=database1;charset=utf8';
     $username = 'your_username';
